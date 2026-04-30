@@ -12,7 +12,7 @@ const MyLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className={`px-2 py-1 text-[20px] ${activePath ? "text-purple-500 border-blue-500" : "hover:bg-gray-400"}`}
+      className={`px-2 py-1 text-[17px] ${activePath ? "text-purple-500 border-b-3  border-red-500 " : "hover:bg-gray-400"}`}
     >
       {children}
     </Link>

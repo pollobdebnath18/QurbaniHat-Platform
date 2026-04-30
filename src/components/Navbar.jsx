@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import MyLink from "./MyLink";
+import Image from "next/image";
 
 const Navbar = () => {
   const middleSide = [
@@ -14,8 +15,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div>
-      <div className="navbar  shadow-sm">
+    <div className=" bg-gray-600 shadow-lg">
+      <div className="navbar  max-w-[1100px] mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,17 +40,27 @@ const Navbar = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              {/* {links.map((link) => {
+              {middleSide.map((link) => {
                 return (
-                  <Link href={`link.path`} key={link.path}>
-                    {link.name}
-                  </Link>
+                  <li key={link.path}>
+                    <MyLink href={link.path}>{link.name}</MyLink>
+                  </li>
                 );
-              })} */}
+              })}
             </ul>
           </div>
-          <h2 className="text-purple-600 border border-amber-100">logo</h2>
-          <a className="text-xl text-purple-600">QurbaniHat</a>
+
+          <div className="flex items-center gap-3">
+            <Image className="rounded-full"
+              src={
+                "https://play-lh.googleusercontent.com/BZhHPtx-N0TRzWIso_Ib--N79_wSUCuHgcMlplfyqXprBvj5OVmt35ph1THYTN9lHLg=w240-h480-rw"
+              }
+              alt="eid icon"
+              width={40}
+              height={40}
+            ></Image>
+            <a className="text-xl text-purple-600">QurbaniHat</a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

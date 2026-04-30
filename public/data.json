@@ -5,11 +5,11 @@
     "type": "Cow",
     "breed": "Local Deshi",
     "price": 120000,
-    "weight": 280,
-    "age": 3,
+    "weight": "280 kg",
+    "age": "3 years",
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani.",
-    "image": "https://i.postimg.cc/example-cow1.jpg",
+    "image": "https://i.ibb.co.com/7dXhMVFm/cow1.webp",
     "category": "Large Animal"
   },
   {
@@ -18,11 +18,11 @@
     "type": "Goat",
     "breed": "Black Bengal",
     "price": 25000,
-    "weight": 35,
-    "age": 2,
+    "weight": "35 kg",
+    "age": "2 years",
     "location": "Dhaka",
     "description": "Strong and healthy Black Bengal goat.",
-    "image": "https://i.postimg.cc/example-goat1.jpg",
+    "image": "https://i.ibb.co.com/spzq6K1F/goat1.jpg",
     "category": "Small Animal"
   },
   {
@@ -31,11 +31,11 @@
     "type": "Cow",
     "breed": "Sahiwal",
     "price": 180000,
-    "weight": 320,
-    "age": 4,
+    "weight": "320 kg",
+    "age": "4 years",
     "location": "Rajshahi",
     "description": "Premium Sahiwal breed cow for Qurbani.",
-    "image": "https://i.postimg.cc/example-cow2.jpg",
+    "image": "https://i.ibb.co.com/TxfFh3Sh/cow2.jpg",
     "category": "Large Animal"
   },
   {
@@ -44,11 +44,11 @@
     "type": "Goat",
     "breed": "Jamunapari",
     "price": 30000,
-    "weight": 40,
-    "age": 3,
+    "weight": "40 kg",
+    "age": "3 years",
     "location": "Narayanganj",
     "description": "Large Jamunapari goat, ideal for sacrifice.",
-    "image": "https://i.postimg.cc/example-goat2.jpg",
+    "image": "https://images.pexels.com/photos/146589/goat-animal-nature-146589.jpeg",
     "category": "Small Animal"
   },
   {
@@ -57,11 +57,11 @@
     "type": "Cow",
     "breed": "Deshi Hybrid",
     "price": 150000,
-    "weight": 300,
-    "age": 3,
+    "weight": "300 kg",
+    "age": "3 years",
     "location": "Chittagong",
     "description": "Strong hybrid cow, well fed and healthy.",
-    "image": "https://i.postimg.cc/example-cow3.jpg",
+    "image": "https://images.pexels.com/photos/422218/cow-animal-farm-422218.jpeg",
     "category": "Large Animal"
   },
   {
@@ -70,11 +70,11 @@
     "type": "Sheep",
     "breed": "Local Sheep",
     "price": 20000,
-    "weight": 25,
-    "age": 2,
+    "weight": "25 kg",
+    "age": "2 years",
     "location": "Sylhet",
     "description": "Healthy sheep suitable for Qurbani.",
-    "image": "https://i.postimg.cc/example-sheep1.jpg",
+    "image": "https://images.pexels.com/photos/248315/sheep-lamb-animal-248315.jpeg",
     "category": "Small Animal"
   },
   {
@@ -83,11 +83,11 @@
     "type": "Goat",
     "breed": "Boer",
     "price": 45000,
-    "weight": 50,
-    "age": 3,
+    "weight": "50 kg",
+    "age": "3 years",
     "location": "Khulna",
     "description": "Imported Boer goat, very healthy.",
-    "image": "https://i.postimg.cc/example-goat3.jpg",
+    "image": "https://images.pexels.com/photos/1770809/goat-animal-1770809.jpeg",
     "category": "Small Animal"
   },
   {
@@ -96,11 +96,11 @@
     "type": "Buffalo",
     "breed": "Local Buffalo",
     "price": 200000,
-    "weight": 450,
-    "age": 5,
+    "weight": "450 kg",
+    "age": "5 years",
     "location": "Barisal",
     "description": "Strong buffalo suitable for Qurbani.",
-    "image": "https://i.postimg.cc/example-buffalo1.jpg",
+    "image": "https://images.pexels.com/photos/208821/buffalo-animal-208821.jpeg",
     "category": "Large Animal"
   },
   {
@@ -109,11 +109,11 @@
     "type": "Goat",
     "breed": "Local",
     "price": 18000,
-    "weight": 25,
-    "age": 1,
+    "weight": "25 kg",
+    "age": "1 year",
     "location": "Cumilla",
     "description": "Small healthy goat for budget Qurbani.",
-    "image": "https://i.postimg.cc/example-goat4.jpg",
+    "image": "https://images.pexels.com/photos/1007410/goat-animal-1007410.jpeg",
     "category": "Small Animal"
   },
   {
@@ -122,11 +122,11 @@
     "type": "Cow",
     "breed": "Holstein Mix",
     "price": 220000,
-    "weight": 350,
-    "age": 4,
+    "weight": "350 kg",
+    "age": "4 years",
     "location": "Gazipur",
     "description": "Premium cow with high meat quality.",
-    "image": "https://i.postimg.cc/example-cow4.jpg",
+    "image": "https://images.pexels.com/photos/422220/cow-farm-animal-422220.jpeg",
     "category": "Large Animal"
   },
   {
@@ -135,11 +135,11 @@
     "type": "Sheep",
     "breed": "Deshi Sheep",
     "price": 22000,
-    "weight": 28,
-    "age": 2,
+    "weight": "28 kg",
+    "age": "2 years",
     "location": "Mymensingh",
     "description": "Healthy white sheep for Qurbani.",
-    "image": "https://i.postimg.cc/example-sheep2.jpg",
+    "image": "https://images.pexels.com/photos/248314/sheep-animal-248314.jpeg",
     "category": "Small Animal"
   },
   {
@@ -148,11 +148,11 @@
     "type": "Cow",
     "breed": "Deshi Black",
     "price": 160000,
-    "weight": 310,
-    "age": 3,
+    "weight": "310 kg",
+    "age": "3 years",
     "location": "Rangpur",
     "description": "Strong black cow, healthy and active.",
-    "image": "https://i.postimg.cc/example-cow5.jpg",
+    "image": "https://images.pexels.com/photos/162240/cow-animal-162240.jpeg",
     "category": "Large Animal"
   },
   {
@@ -161,11 +161,11 @@
     "type": "Goat",
     "breed": "Boer Mix",
     "price": 38000,
-    "weight": 45,
-    "age": 2,
+    "weight": "45 kg",
+    "age": "2 years",
     "location": "Jessore",
     "description": "Premium white goat with good health.",
-    "image": "https://i.postimg.cc/example-goat5.jpg",
+    "image": "https://images.pexels.com/photos/1007420/goat-animal-1007420.jpeg",
     "category": "Small Animal"
   },
   {
@@ -174,11 +174,11 @@
     "type": "Buffalo",
     "breed": "River Buffalo",
     "price": 240000,
-    "weight": 500,
-    "age": 6,
+    "weight": "500 kg",
+    "age": "6 years",
     "location": "Pabna",
     "description": "Very large buffalo, strong and healthy.",
-    "image": "https://i.postimg.cc/example-buffalo2.jpg",
+    "image": "https://images.pexels.com/photos/208822/buffalo-animal-208822.jpeg",
     "category": "Large Animal"
   },
   {
@@ -187,11 +187,11 @@
     "type": "Sheep",
     "breed": "Local",
     "price": 21000,
-    "weight": 26,
-    "age": 2,
+    "weight": "26 kg",
+    "age": "2 years",
     "location": "Noakhali",
     "description": "Healthy brown sheep for Qurbani.",
-    "image": "https://i.postimg.cc/example-sheep3.jpg",
+    "image": "https://images.pexels.com/photos/248316/sheep-animal-248316.jpeg",
     "category": "Small Animal"
   }
 ]

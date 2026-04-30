@@ -1,10 +1,12 @@
+import Banner from "@/components/homepage/Banner";
+import Featured from "@/components/homepage/Featured";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
-      <h2 className="text-[30px] font-bold text-green-500">Hello World</h2>
-      <button className="btn btn-primary">Btn</button>
+    <div className="">
+      <Banner></Banner>
+      <Featured></Featured>
     </div>
   );
 }

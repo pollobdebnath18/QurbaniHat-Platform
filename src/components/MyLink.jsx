@@ -8,7 +8,7 @@ const MyLink = ({ href, children }) => {
 
   const activePath = pathName === href;
 
-  console.log("pathname", pathName, "activepath", activePath);
+  // console.log("pathname", pathName, "activepath", activePath);
   return (
     <Link
       href={href}

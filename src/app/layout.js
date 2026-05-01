@@ -2,6 +2,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
 
 export const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -23,7 +24,10 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-        <main>{children}</main>
+        <main>
+          {children}
+          <ToastContainer />
+        </main>
         <Footer></Footer>
       </body>
     </html>

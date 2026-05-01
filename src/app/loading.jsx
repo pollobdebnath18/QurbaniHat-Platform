@@ -3,8 +3,8 @@ import { RingLoader } from 'react-spinners';
 
 const loading = () => {
     return (
-      <div className='flex justify-between items-center text-8xl text-blue-500'>
-        <RingLoader />
+      <div className=' flex justify-center items-center text-8xl '>
+        <RingLoader className='text-blue-700 bg-blue-800 rounded-full'/> 
       </div>
     );
 };

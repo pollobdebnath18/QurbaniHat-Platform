@@ -8,7 +8,7 @@ import { authClient, useSession } from "@/lib/auth-client";
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData?.data?.user;
-  console.log(user);
+  // console.log(user);
 
   const signOut = async () => {
     await authClient.signOut();
@@ -16,6 +16,7 @@ const Navbar = () => {
   const middleSide = [
     { name: "Home", path: "/" },
     { name: "All Animals", path: "/allanimals" },
+    { name: "Profile", path: "/profile" },
   ];
 
   const rightSide = [

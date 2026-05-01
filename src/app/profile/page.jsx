@@ -1,0 +1,44 @@
+"use client";
+import ProfileUpdateModal from "@/components/ProfileUpdateModal";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
+import React from "react";
+import { PulseLoader } from "react-spinners";
+
+const ProfilePage = () => {
+  const userData = authClient.useSession();
+  const user = userData?.data?.user;
+  console.log(user);
+  if (!user) {
+    return (
+      <div className="text-3xl font-bold flex justify-center items-center pt-10">
+        <PulseLoader />
+      </div>
+    );
+  }
+  return (
+    <div className="flex items-center py-16 justify-center bg-gray-900">
+      <div className="w-full max-w-sm bg-gray-800 border border-purple-500 shadow-xl rounded-2xl p-6 text-center">
+        <Image
+          src={user?.image}
+          alt="user"
+          width={120}
+          height={120}
+          className="rounded-full mx-auto border-4 border-purple-400"
+        />
+
+        <h2 className="text-xl font-bold text-white mt-4">{user?.name}</h2>
+        <p className="text-gray-300">{user?.email}</p>
+
+        <p className="text-sm text-gray-400 mt-2">
+          Last login: {new Date(user?.createdAt).toLocaleString()}
+        </p>
+        <div>
+          <ProfileUpdateModal></ProfileUpdateModal>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfilePage;

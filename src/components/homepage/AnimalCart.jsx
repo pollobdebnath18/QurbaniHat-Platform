@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AnimalCart = ({ animal }) => {
-  console.log(animal, "animal-cart");
-  const { name, image, type, weight, price } = animal;
+  // console.log(animal, "animal-cart");
+  const { id, name, image, type, weight, price } = animal;
   return (
     <div className="card bg-gray-700 shadow-md h-full">
       <figure className="bg-black p-4">
@@ -44,7 +45,9 @@ const AnimalCart = ({ animal }) => {
         </div>
 
         <div className="mt-4">
-          <button className="btn bg-blue-600 w-full">View Details</button>
+          <Link href={`/allanimals/${id}`}>
+            <button className="btn bg-blue-600 w-full">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

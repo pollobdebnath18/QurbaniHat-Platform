@@ -1,16 +1,17 @@
 import React from "react";
 import AnimalCart from "./AnimalCart";
 import Link from "next/link";
+import { fetchAnimalData } from "@/utils/fetchAnimalData";
 
-const animalsData = async () => {
-  const res = await fetch("https://qurbani-hat-platform.vercel.app/data.json");
-  const data = await res.json();
-  //   console.log(data, "animals");
-  return data;
-};
+// const animalsData = async () => {
+//   const res = await fetch("https://qurbani-hat-platform.vercel.app/data.json");
+//   const data = await res.json();
+//   //   console.log(data, "animals");
+//   return data;
+// };
 
 const Featured = async () => {
-  const animals = await animalsData();
+  const animals = await fetchAnimalData();
   return (
     <div className="max-w-[1100px] mx-auto">
       <h2 className="text-3xl font-bold text-center my-12">

@@ -1,7 +1,9 @@
+
 import Link from "next/link";
 import React from "react";
 import MyLink from "./MyLink";
 import Image from "next/image";
+import { useSession } from "@/lib/auth-client";
 
 const Navbar = () => {
   const middleSide = [
@@ -51,7 +53,8 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <Image className="rounded-full"
+            <Image
+              className="rounded-full"
               src={
                 "https://play-lh.googleusercontent.com/BZhHPtx-N0TRzWIso_Ib--N79_wSUCuHgcMlplfyqXprBvj5OVmt35ph1THYTN9lHLg=w240-h480-rw"
               }

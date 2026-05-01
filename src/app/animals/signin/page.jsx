@@ -1,14 +1,34 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import React from "react";
+import { toast } from "react-toastify";
 
 const Signin = () => {
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+
+    const { data, error } = await authClient.signIn.email({
+      email: email,
+      password: password,
+      callbackURL: "/",
+    });
+    if (error) {
+      toast.error(error?.message || "Sign In Failed");
+    }
+    if (data) {
+      toast.success("Sign In Successfull");
+    }
+  };
   return (
     <div
       data-theme="light"
       className=" bg-gray-400 flex items-center justify-center px-4 py-8 "
     >
       <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 gap-30 items-center">
-       
         <div className="hidden md:block space-y-4">
           <h1 className="text-4xl font-bold text-primary">
             Welcome to QurbaniHat
@@ -32,11 +52,13 @@ const Signin = () => {
           <div className="card-body">
             <h2 className="text-2xl font-bold text-center">Login Account</h2>
 
-            <form className="space-y-4 mt-4">
+            <form className="space-y-4 mt-4" onSubmit={handleSignIn}>
               <div>
                 <label className="label">Email</label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   placeholder="Enter email"
                   className="input input-bordered w-full"
                 />
@@ -46,6 +68,8 @@ const Signin = () => {
                 <label className="label">Password</label>
                 <input
                   type="password"
+                  name="password"
+                  required
                   placeholder="Enter password"
                   className="input input-bordered w-full"
                 />
@@ -86,9 +110,12 @@ const Signin = () => {
 
             <p className="text-center text-sm mt-4">
               Don’t have an account?{" "}
-              <a className="text-primary font-medium hover:underline">
+              <Link
+                href={"/animals/signup"}
+                className="text-primary font-medium hover:underline"
+              >
                 SignUp
-              </a>
+              </Link>
             </p>
           </div>
         </div>

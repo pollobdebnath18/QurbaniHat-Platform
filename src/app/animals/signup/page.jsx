@@ -1,5 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import React from "react";
 import { toast } from "react-toastify";
 
@@ -15,10 +16,10 @@ const Signup = () => {
     const { data, error } = await authClient.signUp.email({
       name: name,
       email: email,
-      photo: photo,
+      image: photo,
       password: password,
     });
-
+    console.log({ data, error });
     if (error) {
       toast.error(error?.message || "SignUp Failed");
     }
@@ -126,7 +127,12 @@ const Signup = () => {
 
             <p className="text-center text-sm mt-4">
               Already have an account?{" "}
-              <a className="text-primary font-medium hover:underline">Login</a>
+              <Link
+                href={"/animals/signin"}
+                className="text-primary font-medium hover:underline"
+              >
+                Login
+              </Link>
             </p>
           </div>
         </div>

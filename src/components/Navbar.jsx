@@ -1,11 +1,18 @@
-
+"use client";
 import Link from "next/link";
 import React from "react";
 import MyLink from "./MyLink";
 import Image from "next/image";
-import { useSession } from "@/lib/auth-client";
+import { authClient, useSession } from "@/lib/auth-client";
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  const user = userData?.data?.user;
+  console.log(user);
+
+  const signOut = async () => {
+    await authClient.signOut();
+  };
   const middleSide = [
     { name: "Home", path: "/" },
     { name: "All Animals", path: "/allanimals" },
@@ -78,13 +85,37 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
-            {rightSide.map((lnk) => {
-              return (
-                <li key={lnk.path}>
-                  <MyLink href={lnk.path}>{lnk.name}</MyLink>
-                </li>
-              );
-            })}
+            {!user &&
+              rightSide.map((lnk) => {
+                return (
+                  <li key={lnk.path}>
+                    <MyLink href={lnk.path}>{lnk.name}</MyLink>
+                  </li>
+                );
+              })}
+            {user && (
+              <div>
+                <div className="avatar w-10">
+                  {user ? (
+                    <Image
+                      src={user?.image}
+                      alt="profile"
+                      width={30}
+                      height={30}
+                      className="rounded-full"
+                    />
+                  ) : (
+                    <div className="text-xl font-bold bg-purple-600 text-white flex justify-center items-center rounded-full">
+                      user?.name?.charAt(0).toUpperCase()
+                    </div>
+                  )}
+                </div>
+
+                <button className="btn btn-primary ml-3" onClick={signOut}>
+                  SignOut
+                </button>
+              </div>
+            )}
           </ul>
         </div>
       </div>

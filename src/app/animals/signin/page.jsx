@@ -23,6 +23,13 @@ const Signin = () => {
       toast.success("Sign In Successfull");
     }
   };
+
+  const googleSignIn = async () => {
+    console.log("google");
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
   return (
     <div
       data-theme="light"
@@ -86,7 +93,10 @@ const Signin = () => {
 
             <div className="divider">OR</div>
 
-            <button className="btn bg-white text-black border border-gray-300 w-full flex gap-2 items-center justify-center">
+            <button
+              className="btn bg-white text-black border border-gray-300 w-full flex gap-2 items-center justify-center"
+              onClick={googleSignIn}
+            >
               <svg width="18" height="18" viewBox="0 0 512 512">
                 <path
                   fill="#34a853"

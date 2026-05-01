@@ -1,10 +1,12 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { toast } from "react-toastify";
 
 const Signup = () => {
+  const router = useRouter();
   const handleSignUp = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -25,8 +27,14 @@ const Signup = () => {
     }
     if (data) {
       toast.success("SignUp Successfully");
+      router.push("/animals/signin");
       console.log(name, email, password);
     }
+  };
+  const googleSignup = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
   return (
     <div
@@ -103,7 +111,10 @@ const Signup = () => {
 
             <div className="divider">OR</div>
 
-            <button className="btn bg-white text-black border border-gray-300 w-full flex items-center justify-center gap-2">
+            <button
+              className="btn bg-white text-black border border-gray-300 w-full flex items-center justify-center gap-2"
+              onClick={googleSignup}
+            >
               <svg width="18" height="18" viewBox="0 0 512 512">
                 <path
                   fill="#34a853"

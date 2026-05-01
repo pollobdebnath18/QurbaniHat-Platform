@@ -9,12 +9,11 @@ const AnimalCart = ({ animal }) => {
       <div className="card bg-gray-900  shadow-sm">
         <figure>
           <Image
-            src={
-              image
-            }
+            src={image}
             alt="animal"
-            width={100}
-            height={100}
+            width={200}
+            height={200}
+            className="bg-white rounded-2xl object-cover"
           ></Image>
         </figure>
         <div className="card-body">

@@ -97,7 +97,7 @@ const Navbar = () => {
             {user && (
               <div>
                 <div className="avatar w-10">
-                  {user ? (
+                  {user?.image ? (
                     <Image
                       src={user?.image}
                       alt="profile"
@@ -106,8 +106,8 @@ const Navbar = () => {
                       className="rounded-full"
                     />
                   ) : (
-                    <div className="text-xl font-bold bg-purple-600 text-white flex justify-center items-center rounded-full">
-                      user?.name?.charAt(0).toUpperCase()
+                    <div className="text-xl font-bold bg-purple-600 text-white flex justify-center items-center rounded-full p-3">
+                      {user?.name?.charAt(0).toUpperCase()}
                     </div>
                   )}
                 </div>

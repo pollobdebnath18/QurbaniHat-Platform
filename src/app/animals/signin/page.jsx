@@ -45,6 +45,7 @@ const Signin = () => {
             for Qurbani.
           </p>
 
+          
           <div className="bg-base-100 p-6 rounded-xl shadow">
             <p className="text-sm">
               ✔ Secure authentication

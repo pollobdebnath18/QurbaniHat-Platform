@@ -18,6 +18,7 @@ const ProfileUpdateModal = () => {
       name: name,
       image: photo,
     });
+    toast.success("Profile updated successfully");
   };
   return (
     <Modal>

@@ -19,7 +19,7 @@ const Featured = async () => {
         Featured animals
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 ">
-        {animals.slice(0, 6).map((animal) => {
+        {animals.slice(0, 4).map((animal) => {
           return <AnimalCart key={animal.id} animal={animal}></AnimalCart>;
         })}
       </div>

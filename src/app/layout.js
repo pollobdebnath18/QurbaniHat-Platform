@@ -10,6 +10,9 @@ export const openSans = Open_Sans({
 });
 
 export const metadata = {
+  icons: {
+    icon: "/logo.png",
+  },
   title: "QurbaniHat Platform",
   description:
     " QurbaniHat Platform - A modern livestock booking platform where users can explore animals for Qurbani and book them securely after authentication.",

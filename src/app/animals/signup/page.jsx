@@ -1,10 +1,11 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import Lottie from "lottie-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { toast } from "react-toastify";
-
+import SignUp from "@/assets/signup.json";
 const Signup = () => {
   const router = useRouter();
   const handleSignUp = async (e) => {
@@ -49,13 +50,8 @@ const Signup = () => {
             booking.
           </p>
 
-          <div className="bg-base-100 p-6 rounded-xl shadow">
-            <p className="text-sm">
-              ✔ Fast registration
-              <br />
-              ✔ Secure authentication
-              <br />✔ Access all animals anytime
-            </p>
+          <div className="w-[350px]  mx-auto">
+            <Lottie animationData={SignUp} loop={true}></Lottie>
           </div>
         </div>
 

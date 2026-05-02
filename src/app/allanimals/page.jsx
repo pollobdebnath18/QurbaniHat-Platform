@@ -12,10 +12,25 @@ const AllAnimalsPage = async () => {
   const animals = await animalsData();
   return (
     <div className="max-w-[1100px] mx-auto">
-      <h2 className="text-3xl font-bold text-center my-12">
-        {" "}
-        All animals
-      </h2>
+      <div className="flex justify-between items-center ">
+        <div></div>
+        <h2 className="text-3xl font-bold text-center my-12">All animals</h2>
+        <div className="flex gap-2">
+          <input
+            type="text"
+            className="input input-bordered w-full"
+            placeholder="Sort items..."
+            list="sortOptions"
+          />
+
+          <button className="btn btn-primary">Sort</button>
+
+          <datalist id="sortOptions">
+            <option value="Ascending" />
+            <option value="Descending" />
+          </datalist>
+        </div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 ">
         {animals.map((animal) => {
           return <AnimalCart key={animal.id} animal={animal}></AnimalCart>;

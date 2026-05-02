@@ -25,17 +25,18 @@ const Footer = () => {
         <div className="text-sm space-y-2 text-center sm:text-left">
           <h3 className="font-bold text-lg mb-2">Contact</h3>
           <p>📍 Banani, 221 Mahakali, Dhaka</p>
-          <p>📞 +880 1712-345678</p>
-          <p>✉️ support@qurbanihat.com</p>
+          <p>📞 +880 1780589179</p>
+          <p>✉️ pullobdebnath@gmail.com</p>
         </div>
 
-        <div className="text-center md:text-left">
-          <h3 className="font-bold text-lg mb-3">Follow Us</h3>
+        <div className="text-center ">
+          <h3 className="font-bold text-lg mb-3 flex items-center text-center">
+            Follow Us
+          </h3>
 
           <div className="flex justify-center sm:justify-start gap-5 text-2xl">
             <FaFacebook className="hover:text-blue-500 cursor-pointer transition" />
             <FaInstagram className="hover:text-pink-500 cursor-pointer transition" />
-            <FaTwitter className="hover:text-sky-400 cursor-pointer transition" />
             <FaYoutube className="hover:text-red-500 cursor-pointer transition" />
           </div>
         </div>

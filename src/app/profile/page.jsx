@@ -9,7 +9,7 @@ import { PulseLoader } from "react-spinners";
 const ProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData?.data?.user;
-  
+
   if (!user) {
     return (
       <div className="text-3xl font-bold flex justify-center items-center pt-10">
@@ -17,6 +17,7 @@ const ProfilePage = () => {
       </div>
     );
   }
+
   console.log(user?.name?.charAt(0));
   return (
     <div className="flex items-center py-16 justify-center bg-gray-900">

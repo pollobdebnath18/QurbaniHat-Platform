@@ -4,6 +4,7 @@ import React from "react";
 import MyLink from "./MyLink";
 import Image from "next/image";
 import { authClient, useSession } from "@/lib/auth-client";
+import { useSpring, animated } from "@react-spring/web";
 
 const Navbar = () => {
   const userData = authClient.useSession();
@@ -23,6 +24,12 @@ const Navbar = () => {
     { name: "Sign In", path: "/animals/signin" },
     { name: "Sign Up", path: "/animals/signup" },
   ];
+
+  const styles = useSpring({
+    from: { opacity: 0, transform: "translateX(80px)" },
+    to: { opacity: 1, transform: "translateY(0px)" },
+    config: { duration: 1500 }, // slow animation
+  });
 
   return (
     <div className=" bg-gray-800 shadow-lg">
@@ -70,7 +77,9 @@ const Navbar = () => {
               width={40}
               height={40}
             ></Image>
-            <a className="text-xl text-purple-600">QurbaniHat</a>
+            <animated.h1 style={styles}>
+              <a className="text-2xl font-extrabold text-purple-700">QurbaniHat</a>
+            </animated.h1>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -96,21 +105,23 @@ const Navbar = () => {
               })}
             {user && (
               <div>
-                <div className="avatar w-10">
-                  {user?.image ? (
-                    <Image
-                      src={user?.image}
-                      alt="profile"
-                      width={30}
-                      height={30}
-                      className="rounded-full"
-                    />
-                  ) : (
-                    <div className="text-xl font-bold bg-purple-600 text-white flex justify-center items-center rounded-full p-3">
-                      {user?.name?.charAt(0).toUpperCase()}
-                    </div>
-                  )}
-                </div>
+                <Link href={"/profile"}>
+                  <div className="avatar w-10 cursor-pointer">
+                    {user?.image ? (
+                      <Image
+                        src={user?.image}
+                        alt="profile"
+                        width={30}
+                        height={30}
+                        className="rounded-full"
+                      />
+                    ) : (
+                      <div className="text-xl font-bold bg-purple-600 text-white flex justify-center items-center rounded-full p-3">
+                        {user?.name?.charAt(0).toUpperCase()}
+                      </div>
+                    )}
+                  </div>
+                </Link>
 
                 <button className="btn btn-primary ml-3" onClick={signOut}>
                   SignOut

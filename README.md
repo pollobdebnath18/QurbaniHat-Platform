@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐄 QurbaniHat – Livestock Booking Platform
 
-## Getting Started
+A modern livestock marketplace web application where users can explore animals for Qurbani (such as cows and goats), view detailed information, and place bookings after authentication.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
+🔗 https://qurbani-hat-platform.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📌 Project Purpose
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+QurbaniHat is designed to simplify the process of browsing and booking sacrificial animals online. Users can:
+- Explore available animals
+- View detailed information
+- Place bookings after login
+- Manage their profile
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🏠 Home Page
+- Hero banner section
+- Featured animals (4 items)
+- Qurbani tips section
+- Top breeds section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🐂 All Animals Page
+- Display animals from JSON data
+- Sort by price (Low → High / High → Low)
+- Animal cards with details button
 
-## Deploy on Vercel
+### 📄 Animal Details Page
+- Full animal information view
+- Booking form (name, email, phone, address)
+- Login required for booking
+- Success toast notification
+- Form resets after submission
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔐 Authentication
+- User registration system
+- Login system
+- Google authentication
+- Protected routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 👤 Profile System
+- View logged-in user info
+- Update profile (name & image)
+- Uses Better Auth update API
+
+### ⚙️ Extra Features
+- Fully responsive design
+- Toast notifications
+- Loading states
+- Not Found page (404)
+- Secure environment variables
+- Unique UI design
+
+---
+
+## 📂 Routes
+
+### 🌐 Public Routes
+- `/` → Home
+- `/animals` → All Animals
+- `/login` → Login
+- `/register` → Register
+
+### 🔒 Private Routes
+- `/details/[id]` → Animal Details
+- `/my-profile` → Profile Page
+
+---
+
+## 🧾 Sample Animal Data
+
+```json
+{
+  "id": 1,
+  "name": "Deshi Shahi Cow",
+  "type": "Cow",
+  "breed": "Local Deshi",
+  "price": 120000,
+  "weight": 280,
+  "age": 3,
+  "location": "Bogura",
+  "description": "Healthy deshi cow suitable for Qurbani.",
+  "image": "https://i.postimg.cc/example-cow1.jpg",
+  "category": "Large Animal"
+}

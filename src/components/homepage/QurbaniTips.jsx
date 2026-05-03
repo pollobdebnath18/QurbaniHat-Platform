@@ -53,7 +53,7 @@ const QurbaniTips = () => {
             </p>
           </div>
 
-          <div className="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition sm:col-span-2 lg:col-span-1">
+          <div className="bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg transition ">
             <FaCheckCircle className="text-3xl text-purple-400 mb-4" />
             <h3 className="font-bold text-lg mb-2">Proper Care</h3>
             <p className="text-gray-300 text-sm">

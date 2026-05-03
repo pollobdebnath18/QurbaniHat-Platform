@@ -1,8 +1,21 @@
-
 import BuyButton from "@/components/details/BuyButton";
 import DetailsFormSubmit from "@/components/details/DetailsFormSubmit";
 import { fetchAnimalData } from "@/utils/fetchAnimalData";
 import Image from "next/image";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const animals = await fetchAnimalData();
+
+  const specific = animals.find((it) => String(it.id) === String(slug));
+
+   
+
+  return {
+    title: specific?.name || "Animals Details",
+    description: specific?.name || "view animals details",
+  };
+}
 
 const AnimalsDetails = async ({ params }) => {
   const { slug } = await params;

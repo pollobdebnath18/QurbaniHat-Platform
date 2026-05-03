@@ -74,6 +74,30 @@ QurbaniHat is designed to simplify the process of browsing and booking sacrifici
 
 ---
 
+## 📦 NPM Packages Used
+
+### Core Framework
+- nextjs
+
+### Styling
+- tailwindcss
+- daisyui
+- heroui
+
+### Authentication
+- better-auth
+
+### UI / Icons
+- react-icons
+
+### UI Feedback
+- react-toastify
+- react-spinners
+
+### Optional / Enhancements (if used)
+- animate.css
+- lottie-react
+
 ## 🧾 Sample Animal Data
 
 ```json

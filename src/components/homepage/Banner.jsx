@@ -14,7 +14,7 @@ const Banner = () => {
             src="https://pbs.twimg.com/card_img/2047627392777158656/16DNoQHG?format=jpg&name=orig"
             className="w-full"
           />
-          <div className="absolute top-75 right-146  ">
+          <div className="absolute inset-0 flex items-end justify-center pb-12 md:pb-16">
             <Link href={"/allanimals"}>
               <button className="btn btn-primary">Explore Animals</button>
             </Link>
@@ -36,7 +36,7 @@ const Banner = () => {
             src="https://muslimcharity.org.uk/uploads/news/1500_1775576190.jpg"
             className="w-full"
           />
-          <div className="absolute top-75 right-146  ">
+          <div className="absolute inset-0 flex items-end justify-center pb-12 md:pb-16">
             <Link href={"/allanimals"}>
               <button className="btn btn-primary">Explore Animals</button>
             </Link>
@@ -59,8 +59,8 @@ const Banner = () => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvRucrmEFZZbd6TZE_UkRjoSoL_yc8efpmOQ&s"
             className="w-full"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="absolute top-75 right-146  ">
+
+          <div className="absolute inset-0 flex items-end justify-center pb-12 md:pb-16">
             <Link href={"/allanimals"}>
               <button className="btn btn-primary">Explore Animals</button>
             </Link>

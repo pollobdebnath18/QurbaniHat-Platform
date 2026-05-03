@@ -31,12 +31,12 @@ const Footer = () => {
           <p>✉️ pullobdebnath@gmail.com</p>
         </div>
 
-        <div className=" ">
-          <h3 className="font-bold text-lg mb-3 flex items-center justify-center md:justify-end text-right">
+        <div className="flex flex-col gap-3">
+          <h3 className="flex justify-center md:justify-center text-right lg:ml-60">
             Follow Us
           </h3>
 
-          <div className="flex justify-center md:justify-end gap-5 text-2xl">
+          <div className="flex justify-center md:justify-center lg:justify-end gap-5 text-2xl">
             <FaFacebook className="hover:text-blue-500 cursor-pointer transition" />
             <FaInstagram className="hover:text-pink-500 cursor-pointer transition" />
             <FaYoutube className="hover:text-red-500 cursor-pointer transition" />

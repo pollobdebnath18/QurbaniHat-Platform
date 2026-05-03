@@ -1,41 +1,27 @@
-import AnimalCart from "@/components/homepage/AnimalCart";
-import React from "react";
+import { fetchAnimalData } from "@/utils/fetchAnimalData";
+import { HashLoader } from "react-spinners";
+import AnimalsList from "@/components/animals/AnimalsList";
 
-const animalsData = async () => {
-  const res = await fetch("https://qurbani-hat-platform.vercel.app/data.json");
-  const data = await res.json();
-  //   console.log(data, "animals");
-  return data;
-};
+// const getAnimalsData = async () => {
+//   const res = await fetch("https://qurbani-hat-platform.vercel.app/data.json");
+//   return res.json();
+// };
 
 const AllAnimalsPage = async () => {
-  const animals = await animalsData();
+  // let animals = await getAnimalsData();
+  const animals = await fetchAnimalData();
+  console.log(animals);
+  if (!animals) {
+    return (
+      <div className="flex justify-center items-center bg-red-700">
+        <HashLoader className="text-red-700"></HashLoader>
+      </div>
+    );
+  }
+
   return (
-    <div className="max-w-[1100px] mx-auto">
-      <div className="flex justify-between items-center ">
-        <div></div>
-        <h2 className="text-3xl font-bold text-center my-12">All animals</h2>
-        <div className="flex gap-2">
-          <input
-            type="text"
-            className="input input-bordered w-full"
-            placeholder="Sort items..."
-            list="sortOptions"
-          />
-
-          <button className="btn btn-primary">Sort</button>
-
-          <datalist id="sortOptions">
-            <option value="Ascending" />
-            <option value="Descending" />
-          </datalist>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 ">
-        {animals.map((animal) => {
-          return <AnimalCart key={animal.id} animal={animal}></AnimalCart>;
-        })}
-      </div>
+    <div>
+      <AnimalsList animals={animals}></AnimalsList>
     </div>
   );
 };
